@@ -1,0 +1,9 @@
+.mainContainer {
+  width: 100vw !important;
+  height: 100vh !important;
+  background: var(--lightblue);
+}
+
+.subContainer {
+  width: 58rem;
+}

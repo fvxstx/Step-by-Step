@@ -1,0 +1,40 @@
+.containerForm {
+  width: 27.7rem;
+  right: 115px;
+  bottom: 10px;
+}
+
+.titleForm {
+  color: var(--marineblue);
+  margin-bottom: 8px !important;
+}
+
+.subtitleForm {
+  color: var(--coolgray);
+}
+
+.titleInput {
+  color: var(--marineblue);
+  font-size: 14px;
+  margin: 4px;
+}
+
+.form-control:focus {
+  border: 1px solid var(--marineblue);
+  box-shadow: none;
+}
+
+.nextStepButton {
+  margin-top: 5rem !important;
+  left: 345px;
+}
+
+.errorField {
+  position: absolute;
+  font-size: 12px;
+  left: 315px;
+  width: 150px;
+  top: 196px;
+  height: 18px;
+  color: var(--strawberryred);
+}

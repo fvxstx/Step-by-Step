@@ -1,0 +1,79 @@
+<div class="col-md-7 col-lg-8 position-relative containerForm">
+  <h2 class="mb-3 fw-bold titleForm">Personal info</h2>
+  <p class="subtitleForm pb-3 mt-0">
+    Please provide your name, email address, and phone number.
+  </p>
+  <form
+    [formGroup]="profileForm"
+    (ngSubmit)="onSubmit()"
+    class="needs-validation"
+    novalidate=""
+  >
+    <div class="row g-3">
+      <div class="col-12">
+        <label for="name" class="form-label titleInput">Name</label>
+        <input
+          type="text"
+          formControlName="name"
+          class="form-control"
+          id="name"
+          placeholder="Name"
+        />
+        <div
+          *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+          class="errorField fw-bold"
+          style="top: 113px; left: 290px"
+        >
+          <div *ngIf="name?.errors?.['required']">
+            Valid first name is required
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label for="email" class="form-label titleInput">Email Address</label>
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control"
+          id="email"
+          placeholder="you@example.com"
+        />
+        <div
+          *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+          class="errorField fw-bold"
+        >
+          <div *ngIf="email?.errors?.['required']">Valid email is required</div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label for="phone" class="form-label titleInput">Phone Number</label>
+        <input
+          type="tel"
+          formControlName="phone"
+          class="form-control"
+          id="phone"
+          placeholder="(12)345678"
+        />
+        <div
+          *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)"
+          class="errorField fw-bold"
+          style="top: 280px; left: 300px"
+        >
+          <div *ngIf="phone?.errors?.['required']">
+            Valid number is required
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="btn btn-primary position-relative nextStepButton"
+      type="submit"
+      [disabled]="!profileForm.valid"
+    >
+      Next Step
+    </button>
+  </form>
+</div>

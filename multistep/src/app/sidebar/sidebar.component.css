@@ -1,0 +1,28 @@
+.sidebarComponent {
+  width: 255px;
+  height: 33rem;
+  background: url("/assets/images/bg-sidebar-desktop.svg") !important;
+  background-size: cover !important;
+}
+
+.numberCircle {
+  width: 35px;
+  height: 35px;
+  font-size: 15px !important;
+}
+
+.stepsNumber {
+  font-size: 11px !important;
+  color: var(--lightgray) !important;
+}
+
+.stepsName {
+  letter-spacing: 1.5px;
+  font-size: 14px !important;
+}
+
+.numberCircleActive {
+  background-color: var(--lightblue) !important;
+  color: black !important;
+  border: none !important;
+}
